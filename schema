@@ -14,7 +14,7 @@ courses
 - units  : string ("9", "12", "3-12")
 - department_id : integer
 - semester_id : integer
-- deleted : boolean
+- deleted : integer (0 = not deleted, 1 = deleted)
 
 meetings
 - id : integer
@@ -25,4 +25,4 @@ meetings
 - end : string (same as 'begin')
 - days : string ("MW", "TR", "MTWRF")
 - instructor : string ("TBA", "Someone")
-- deleted : boolean
+- deleted : integer (0 = not deleted, 1 = deleted)

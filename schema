@@ -1,0 +1,28 @@
+semesters
+- id     : integer
+- season : string ("Fall", "Spring", "Summer", etc.)
+- year   : integer (2012, 2011, 1990)
+
+departments
+- id   : integer
+- name : string
+
+courses
+- id : integer
+- number : string ("15212", "18240", ...)
+- name   : string
+- units  : string ("9", "12", "3-12")
+- department_id : integer
+- semester_id : integer
+- deleted : boolean
+
+meetings
+- id : integer
+- type : integer (SECTION = 0, LECTURE = 1)
+- course_id : integer
+- section : string ("A", "B2", ... -- blank for LECTURE)
+- begin : string ("TBA", "10:30 AM", "02:50 PM", ...)
+- end : string (same as 'begin')
+- days : string ("MW", "TR", "MTWRF")
+- instructor : string ("TBA", "Someone")
+- deleted : boolean

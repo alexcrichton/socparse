@@ -27,11 +27,11 @@ end
 EM.run do
   row = client.query("SELECT id FROM semesters WHERE year = #{year} AND
                                                      season = '#{season}'")
-  sem_id = row.first['id']
-  if sem_id.nil?
+  if row.first.nil? || row.first['id'].nil?
     puts "Couldn't find semester..."
     exit 2
   end
+  sem_id = row.first['id']
 
   query = "SELECT id, number FROM courses WHERE semester_id = #{sem_id}"
   rows = client.query(query)

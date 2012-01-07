@@ -32,7 +32,7 @@ client.query('CREATE TABLE IF NOT EXISTS departments
 client.query('CREATE TABLE IF NOT EXISTS courses
               (id INT(31) PRIMARY KEY AUTO_INCREMENT, number VARCHAR(255),
                name VARCHAR(255), units VARCHAR(255), department_id INT(31),
-               semester_id INT(31), deleted INT(31),
+               semester_id INT(31), deleted INT(31), description TEXT,
                INDEX dpt_idx USING HASH (department_id ASC),
                INDEX sem_idx USING HASH (semester_id ASC))')
 client.query('CREATE TABLE IF NOT EXISTS meetings

@@ -113,7 +113,6 @@ index.css('a').each do |node|
       else
         p tds.text
         raise "Bad number of cells: #{tds.size}"
-    
     end
 
   end
